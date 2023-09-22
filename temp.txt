@@ -1,0 +1,5 @@
+
+alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891 && curl ip.sb -s && curl http://ip-api.com/json/`curl ip.sb -s` -s | jq '.country, .regio    nName, .city' && echo 代理开启"
+alias unproxy="unset http_proxy https_proxy all_proxy && echo 代理关闭"
+alias proxy_zju="export https_proxy=http://127.0.0.1:1080 http_proxy=http://127.0.0.1:1080 all_proxy=socks5://127.0.0.1:1080 && curl ip.sb"
+alias proxyx_zju="unset http_proxy https_proxy all_proxy && curl ip.sb"
